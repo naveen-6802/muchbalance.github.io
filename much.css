@@ -1,0 +1,223 @@
+  
+/*
+        ░░░░░░░░░▄░░░░░░░░░░░░░░▄
+        ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌ 
+        ░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐
+        ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
+        ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
+        ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌
+        ░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒▌ so source
+        ░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
+        ░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄▌
+        ░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▌
+        ▌▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒▐ much code
+        ▐▒▒▐▀▐▀▒░▄▄▒▄▒▒▒▒▒▒░▒░▒░▒▒▒▒▌
+        ▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒▒▒░▒░▒░▒▒▐
+        ░▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒░▒░▒░▒░▒▒▒▌
+        ░▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▄▒▒▐ how do you accessed ? wow
+        ░░▀▄▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▄▒▒▒▒▌
+        ░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀
+        ░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀
+        ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀ 
+    */
+  * {
+      font-family: 'Open Sans', sans-serif;
+      box-sizing: border-box;
+      user-select: none;
+    }
+    body {
+      margin: 0;
+      height: 100%;
+      background: #fff;
+    }
+    header {
+      padding: 10px;
+      position: relative;
+      background: rgb(252,204,32);
+      background: url('hdr.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+    }
+    table {
+      padding: 20px;
+      width: 90%;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      width: auto;
+      overflow: auto;
+    }
+    #add {
+      padding: 15px;
+      border:0px solid white;
+      border-radius: 10px;
+      outline: 0;
+      box-shadow: rgba(255, 255, 255, 0.3) 0px 4px 12px;
+      background: rgb(251,255,252);
+      font-size: 14px;
+      padding-left: 20%;
+      padding-right: 15%;
+    }
+    #add {
+      width: 90%;
+      text-align: left;
+    }
+    #submit {
+      background-color: white;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    #submit:hover {
+      background: #000;
+      color: white;
+    }
+    #rslt {
+      background: white;
+      height: 100%;
+      width: 100%;
+      border:none;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      margin-top: -3%;
+      position: relative;
+      z-index: 2;
+    }
+    #mainbox {
+      position: relative;
+    }
+    form .clear-text {
+      position: absolute;
+      font-size: 28px;
+      top: 10px;
+      right: 8%;
+      text-decoration: none;
+      background: white;
+      border-radius: 100%;
+      margin: 0;
+      color: rgb(225,179,3);
+  }
+  form .fieldset {
+      position: relative;
+      margin: 10px 0;
+      width: 320px;
+  }
+  form .fieldset .form-text {
+
+  }
+  form .fieldset .form-text:required:valid:focus + .clear-text {
+      display: inline-block;
+  }
+  form .fieldset .form-text:required:invalid + .clear-text {
+      display: none;
+  }
+  form .fieldset .form-text:not([required]).valid-text:focus + .clear-text {
+      display: inline-block;
+  }
+  form .fieldset .form-text:not([required]):not(.valid-text) + .clear-text {
+      display: none;
+  }
+  #addData {
+    padding: 0px;
+    width: 50%;
+    background: white;
+    color: black;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    text-align: left;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    word-wrap: break-word;
+  }
+  #vosc {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 13px;
+    text-align: center;
+    background:rgba(30,65,81);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  #vosc:hover {
+    text-decoration: underline;
+  }
+  #anim {
+    position: absolute;
+    top: 1%;
+    left: 3%;
+    background: url("dtm.png");
+    background-size: 78.125px 49.875px;
+    height: 49.875px;
+    width: 78.125px;
+    transition: 0.5s all ease;
+ }
+ #more{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+      backdrop-filter:blur(6.4px);
+      -webkit-backdrop-filter:blur(6.4px);
+      -ms-backdrop-filter:blur(6.4px);
+    padding: 0;
+    border:none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: all 1s ease;
+    top: -100%;
+    z-index: 1000;
+  }
+  #moremain {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  #mmc {
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    background:white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    word-wrap: break-word;
+    overflow-y: scroll;
+    border:1px solid #ccc;
+  }
+  #mmchdr {
+    padding: 15px;
+    text-align: center;
+    border:none;
+    border-bottom: 1px solid #ccc;
+  }
+  #cdts, #uses, #abtus {
+    padding: 20px;
+    width: 100%;
+  }
+  #shmm {
+  	position: absolute;
+  	bottom: -1%;
+  	right: 0%;
+  	transform: translate(0%,0%);
+  	cursor: pointer;
+  	font-size: 20px;
+  }
+  #clsmm {
+    font-size: 30px;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    cursor: pointer;
+    color: white;
+  }
+  @media screen and (max-width: 500px) {
+      #addData {
+        width: 90%;
+      }
+      #mmc {
+      	height: 80%;
+      	width: 90%;
+      }
+  }
