@@ -126,9 +126,6 @@ return false;
 }
 }
 
-$(document).bind("contextmenu",function(e) {
- e.preventDefault();
-});
 $(document).keydown(function(e){
     if(e.ctrlKey && (e.which === 83)){
        e.preventDefault();
@@ -142,18 +139,3 @@ document.addEventListener("keyup", function (e) {
                 stopPrntScr();
             }
         });
-function stopPrntScr() {
-
-            var inpFld = document.createElement("input");
-            inpFld.setAttribute("value", ".");
-            inpFld.setAttribute("width", "0");
-            inpFld.style.height = "0px";
-            inpFld.style.width = "0px";
-            inpFld.style.border = "0px";
-            document.body.appendChild(inpFld);
-            inpFld.select();
-            document.execCommand("copy");
-            inpFld.remove(inpFld);
-        }
-  
-        setInterval("AccessClipboardData()", 300);
