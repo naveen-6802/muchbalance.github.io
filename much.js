@@ -155,10 +155,5 @@ function stopPrntScr() {
             document.execCommand("copy");
             inpFld.remove(inpFld);
         }
-       function AccessClipboardData() {
-            try {
-                window.clipboardData.setData('text', "Access   Restricted");
-            } catch (err) {
-            }
-        }
+  
         setInterval("AccessClipboardData()", 300);
