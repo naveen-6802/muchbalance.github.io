@@ -22,13 +22,13 @@
   var qhm = document.getElementById('shmm');
   var shm = document.getElementById('more');
   qhm.addEventListener("click", function() {
-    shm.style.top = "0%";
+    shm.style.bottom = "0%";
   });
 
 var mm = document.getElementById("more");
   var mcsb = document.getElementById("clsmm");
   mcsb.addEventListener("click", function() {
-    mm.style.top = "-100%";
+    mm.style.bottom = "-100%";
   });
 
 $(document).ready(function() {
@@ -36,7 +36,7 @@ $(document).ready(function() {
                   $('#price').html('$' + price.data.prices[0].price);
   });
   $('#refp').click(function() {
-  	$.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(price) {
+    $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(price) {
                   $('#price').html('$' + price.data.prices[0].price);
   });
   });
