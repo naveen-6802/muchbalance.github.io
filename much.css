@@ -1,5 +1,7 @@
-  
-/*
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
         ░░░░░░░░░▄░░░░░░░░░░░░░░▄
         ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌ 
         ░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐
@@ -19,202 +21,109 @@
         ░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀
         ░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀
         ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀ 
-    */
-  * {
-      font-family: 'Open Sans', sans-serif;
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      height: 100%;
-      background: #fff;
-    }
-    header {
-      padding: 10px;
-      position: relative;
-      background: rgb(252,204,32);
-      background: url('hdr.png');
-      background-size: cover;
-      background-position: center;
-      z-index: 1;
-    }
-    table {
-      padding: 20px;
-      width: 90%;
-    }
-    th, td {
-      padding: 10px;
-      text-align: center;
-      width: auto;
-      overflow: auto;
-    }
-    #add {
-      padding: 15px;
-      border:0px solid white;
-      border-radius: 10px;
-      outline: 0;
-      box-shadow: rgba(255, 255, 255, 0.3) 0px 4px 12px;
-      background: rgb(251,255,252);
-      font-size: 14px;
-      padding-left: 20%;
-      padding-right: 15%;
-    }
-    #add {
-      width: 90%;
-      text-align: left;
-    }
-    #submit {
-      background-color: white;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    #submit:hover {
-      background: #000;
-      color: white;
-    }
-    #rslt {
-      background: white;
-      height: 100%;
-      width: 100%;
-      border:none;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-      margin-top: -3%;
-      position: relative;
-      z-index: 2;
-    }
-    #mainbox {
-      position: relative;
-    }
-    form .clear-text {
-      position: absolute;
-      font-size: 28px;
-      top: 10px;
-      right: 8%;
-      text-decoration: none;
-      background: white;
-      border-radius: 100%;
-      margin: 0;
-      color: rgb(225,179,3);
-  }
-  form .fieldset {
-      position: relative;
-      margin: 10px 0;
-      width: 320px;
-  }
-  form .fieldset .form-text {
+    -->
+  <title>Dogecoin MuchBalance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="Dogecoin wallet data checker">
+  <meta name="keywords" content="muchbalance, much balance, dogecoin, dogechain, bitcoin, ethereum, dogecoin wallet, dogecoin faucet, blockchain, shiba inu, dogecoin balance, dogecoin price, crypto, cryptocurrency, internet, nft, metaverse, dogecoin to the moon">
+  <meta property="og:title" content="MuchBalance" />
+  <meta property="og:description" content="Dogecoin wallet data checker" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://muchbalance.github.io/" />
+  <meta property="og:site_name" content="Dogecoin MuchBalance" />
+  <meta property="og:locale" content="en_US">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <link rel="icon" href="f32.ico" type="image/gif" sizes="32x32" />
+  <link rel="icon" href="f64.ico" type="image/gif" sizes="64x64" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="much.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJWRT04T37"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  }
-  form .fieldset .form-text:required:valid:focus + .clear-text {
-      display: inline-block;
-  }
-  form .fieldset .form-text:required:invalid + .clear-text {
-      display: none;
-  }
-  form .fieldset .form-text:not([required]).valid-text:focus + .clear-text {
-      display: inline-block;
-  }
-  form .fieldset .form-text:not([required]):not(.valid-text) + .clear-text {
-      display: none;
-  }
-  #addData {
-    padding: 0px;
-    width: 50%;
-    background: white;
-    color: black;
-    border-radius: 20px;
-    display: block;
-    margin: auto;
-    text-align: left;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    word-wrap: break-word;
-  }
-  #vosc {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    font-size: 13px;
-    text-align: center;
-    background:rgba(30,65,81);
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  #vosc:hover {
-    text-decoration: underline;
-  }
-  #anim {
-    position: absolute;
-    top: 1%;
-    left: 3%;
-    background: url("dtm.png");
-    background-size: 78.125px 49.875px;
-    height: 49.875px;
-    width: 78.125px;
-    transition: 0.5s all ease;
- }
- #more{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background: rgba(0,0,0,0.5);
-      backdrop-filter:blur(6.4px);
-      -webkit-backdrop-filter:blur(6.4px);
-      -ms-backdrop-filter:blur(6.4px);
-    padding: 0;
-    border:none;
+  gtag('config', 'G-QJWRT04T37');
+</script>
+</head>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<body>
+<img src="dd.gif" height="65.3625" width="41.34375" style="position: absolute;bottom: -1%;left: 2%;z-index: 3;transform: scaleX(-1);">
+<div>
+<header>
+  
+  <div>
+  <img src="dogecoin-300.png" height="50" width="50" style="margin-left: 3%;" />
+  <p style="float: right;margin-right: 3%;color: white;">Price: <strong><span id="price" style="color: white;"></span></strong> &nbsp;<i class="fa fa-refresh" style="cursor: pointer;" id="refp"></i></p>
+</div>
+<br/>
+<center>
+<form action="javascript:void(0);">
+  <div class="fieldset">
+    <div id="anim"></div>
+    <input type="text" id="add" name="query" required placeholder="Enter dogecoin address" class="form-text" autofocus>
+    <a href="#" class="clear-text material-icons">cancel</a>
+  </div>
+</form>
+<br/><br/>
+</center>
+</header>
+
+
+<div id="rslt">
+<br/><br/>
+<div id="oneb">
+  
+</div>
+
+</div>  
+</div>
+
+<span id="shmm"><img src="clcm.png" height="85" width="85"></span>
+
+<div id="more">
     
-    bottom: -100%;
-    z-index: 1000;
-  }
-  #mmc {
-    position: fixed;
-    height: 80%;
-    width: 100%;
-    background:white;
-    bottom: -100%;
-    left: 0%;
-    right: 0%;
-    word-wrap: break-word;
-    overflow-y: scroll;
-    border:none;
-    border-radius: 0px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    transition: all 1s ease;
-    z-index: 1001;
-  }
-  #mmchdr {
-    padding: 15px;
-    text-align: center;
-    border:none;
-    border-bottom: 1px solid #ccc;
-  }
-  #cdts, #uses, #abtus {
-    padding: 20px;
-    width: 100%;
-  }
-  #shmm {
-    position: absolute;
-    bottom: -1%;
-    right: 0%;
-    transform: translate(0%,0%);
-    cursor: pointer;
-    font-size: 20px;
-  }
-  #clsmm {
-    font-size: 30px;
-    position: absolute;
-    top: 2%;
-    right: 5%;
-    cursor: pointer;
-    color: white;
-  }
-  @media screen and (max-width: 500px) {
-      #addData {
-        width: 90%;
-      }
-      #mmc {
-        height: 60%;
-        width: 100%;
-      }
-  }
+</div>
+<div id="mmc">
+      <div id="mmchdr"><h3>Credits, Use & About</h3></div>
+      
+      <div id="uses">
+        <p style="color: green;"><strong>Notice - Use only DOGECOIN network to withdraw your dogecoins from exchanges to your wallet. If you use any other network, those dogecoins will not remain real dogecoins. So please ensure before withdrawing, that you are withdrawing your coins via dogecoin network(This will charge you a little bit more fees compared to any other network, but this will keep your dogecoins real).</strong></p>
+        
+        <h4>Use : </h4>
+        <p>By entering your dogecoin address in input field, you will get your - dogecoin wallet balance in dogecoin & in USD, received dogecoin amount in dogecoin, spent dogecoin amount in dogecoin.</p>
+        <p>There is an refresh button just after price shown in USD, by clicking on that button, price of dogecoin in USD will be refreshed.</p>
+  <p>This website can behave like a mobile app, just add it to your homescreen(Click on 3 dots or on menu in your browser and there will be a option Add To Home Screen), and it will work like an app.</p>
+      </div>
+      
+      <div id="cdts">
+        <h4>Credits : </h4>
+        <p>This website is built using SoChain API, it means the data you see of your dogecoin address is fetched from doge blockchain data using SoChain API on our website, so all data credit goes to <a href="http://chain.so/" target="_blank">SoChain</a>.</p>
+        <p>The logo image of dogecoin is used from <a href="http://www.dogecoin.com/" target="_blank">Dogecoin</a>'s official website(Their official logo). Logo image credits goes to them.</p>
+        <p>The header image in which Doge sitting on the moon is used from reddit - <a href="https://www.reddit.com/r/dogecoin/comments/mwd00e/4k_moon_doge_wallpaper/" target="_blank">Source</a></p>
+        <p>Remaining three images - 1. Doge on rocket, 2. Dancing Doge & 3. Click Me Doge are used from somewhere on internet, credit goes to their respective owners/makers.</p>
+      </div>
+
+      <div id="abtus">
+        <h4>About : </h4>
+        <p>Why this website ? -  there are many websites on internet on which you can see your wallet balance & additional block data but they redirects you to other page or takes some time to show data. But we made this website much fast, such easy so you just have to enter your dogecoin address & it will show you your wallet data without refreshing or redirecting to any other page.</p>
+        <p>Our website is non-profitable, it means we don't generate any income by providing this service, we don't charge you any amount of fiat or crypto for using our website.</p>
+        <p>We don't collect any type of your data like your dogecoin address, IP address, or any other important data. The use of this website is just to get your dogecoin wallet balance wowly much fast. This website is built on Front-End. <b>Our purpose is not to collect your data, but is to help DOGE community newbies & all members to getting easy access to their data.</b></p>
+        <br/>
+        <p>Our social media - </p>
+        <p>Developed & Designed by - <a href="http://www.twitter.com/naveen6802" target="_blank">naveen6802</a></p>
+      </div>
+    </div>
+
+<script type="text/javascript" src="much.js"></script>
+
+</body>
+</html>
