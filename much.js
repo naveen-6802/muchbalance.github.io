@@ -29,7 +29,7 @@
 
 var mm = document.getElementById("more");
   var mcsb = document.getElementById("clsmm");
-  mcsb.addEventListener("click", function() {
+  mm.addEventListener("click", function() {
     mm.style.bottom = "-100%";
     shmm.style.bottom = "-100%";
   });
