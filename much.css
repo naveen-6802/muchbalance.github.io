@@ -162,16 +162,16 @@
       -ms-backdrop-filter:blur(6.4px);
     padding: 0;
     border:none;
-    transition: all 1s ease;
+    
     bottom: -100%;
     z-index: 1000;
   }
   #mmc {
-    position: absolute;
+    position: fixed;
     height: 80%;
     width: 100%;
     background:white;
-    bottom: 0%;
+    bottom: -100%;
     left: 0%;
     right: 0%;
     word-wrap: break-word;
@@ -180,6 +180,8 @@
     border-radius: 0px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    transition: all 1s ease;
+    z-index: 1001;
   }
   #mmchdr {
     padding: 15px;
