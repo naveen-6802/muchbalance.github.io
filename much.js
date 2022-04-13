@@ -21,14 +21,17 @@
     */
   var qhm = document.getElementById('shmm');
   var shm = document.getElementById('more');
+  var shmm = document.getElementById('mmc');
   qhm.addEventListener("click", function() {
     shm.style.bottom = "0%";
+    shmm.style.bottom = "0%";
   });
 
 var mm = document.getElementById("more");
   var mcsb = document.getElementById("clsmm");
   mcsb.addEventListener("click", function() {
     mm.style.bottom = "-100%";
+    shmm.style.bottom = "-100%";
   });
 
 $(document).ready(function() {
