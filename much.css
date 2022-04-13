@@ -184,7 +184,7 @@
     z-index: 1001;
   }
   #mmchdr {
-    padding: 15px;
+    padding: 5px;
     text-align: center;
     border:none;
     border-bottom: 1px solid #ccc;
@@ -201,20 +201,12 @@
     cursor: pointer;
     font-size: 20px;
   }
-  #clsmm {
-    font-size: 30px;
-    position: absolute;
-    top: 2%;
-    right: 5%;
-    cursor: pointer;
-    color: white;
-  }
   @media screen and (max-width: 500px) {
       #addData {
         width: 90%;
       }
       #mmc {
-        height: 65%;
+        height: 70%;
         width: 100%;
       }
   }
