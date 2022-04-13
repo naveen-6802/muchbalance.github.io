@@ -57,7 +57,7 @@ $(document).ready(function() {
   }
                $.getJSON('https://chain.so/api/v2/get_address_balance/DOGE/' + $('#add').val(), function(data) {
                 $.blnc = data.data.confirmed_balance;
-                  $('#oneb').html('<div id="addData"><div style="display:block;margin:auto;padding:15px;border:none;border-bottom:1px solid #ccc;"><center><span style="color:#525b54;">Total Balance :</span><br/><span style="color: #000;font-size: 25px;"><b>Ð' + thousands_separators(wot($.blnc)) + '</b></span><br/><span id="val" style="color: #525b54;"></span></center></div><div style="display: block;margin: auto;padding: 25px;">Received Amount : <br/><span id="rv" style="color: green;"></span><br/><br/>Sent Amount : <br/><span id="sv" style="color: red;"></span><br/><br/><center><a id="vosc" href="" target="_blank">View on SoChain</a></center></div></div>');
+                  $('#oneb').html('<div id="addData"><div style="display:block;margin:auto;padding:15px;border:none;border-bottom:1px solid #ccc;"><center><span style="color:#525b54;">Total Balance :</span><br/><span style="color: #000;font-size: 25px;"><b>Ð' + thousands_separators(wot($.blnc)) + '</b></span><br/><span id="val" style="color: #525b54;"></span></center></div><div style="display: block;margin: auto;padding: 25px;">Received Amount : <br/><span id="rv" style="color: green;"></span><br/><br/>Sent Amount : <br/><span id="sv" style="color: red;"></span><br/><br/><center><a id="vosc" href="" target="_blank"><i class="fa fa-eye"></i> View on SoChain</a></center></div></div>');
                   $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(price) {
                   $('#val').html('$' + thousands_separators(wot($.blnc*price.data.prices[0].price)));
           });
