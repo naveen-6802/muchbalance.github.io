@@ -55,11 +55,24 @@ $(document).ready(function() {
     fnum = parseFloat(ae).toFixed(2);
     return fnum;
   }
+
                $.getJSON('https://chain.so/api/v2/get_address_balance/DOGE/' + $('#add').val(), function(data) {
                 $.blnc = data.data.confirmed_balance;
-                  $('#oneb').html('<div id="addData"><div style="display:block;margin:auto;padding:15px;border:none;border-bottom:1px solid #ccc;"><center><span style="color:#525b54;">Total Balance :</span><br/><span style="color: #000;font-size: 25px;"><b>Ð' + thousands_separators(wot($.blnc)) + '</b></span><br/><span id="val" style="color: #525b54;"></span></center></div><div style="display: block;margin: auto;padding: 25px;">Received Amount : <br/><span id="rv" style="color: green;"></span><br/><br/>Sent Amount : <br/><span id="sv" style="color: red;"></span><br/><br/><center><a id="vosc" href="" target="_blank"><i class="fa fa-eye"></i> View on SoChain</a></center></div></div>');
+                  $('#oneb').html('<div id="addData"><div style="margin: 0;padding: 0;display: flex;justify-content: space-between;border:none;border-bottom:1px solid #ccc;"><div style="display:block;margin:auto;padding:15px;"><center><span style="color:#525b54;">Total Balance :</span><br/><span style="color: #000;font-size: 25px;"><b>Ð' + thousands_separators(wot($.blnc)) + '</b></span><br/><span id="val" style="color: #525b54;"></span></center></div><div style="padding:15px;" id="qrcode"><img id="qrimg" height="50" width="50" /><center><a id="qdn"><ion-icon name="arrow-down-circle"></ion-icon></a></center></div></div><div style="display: block;margin: auto;padding: 25px;">Received Amount : <br/><span id="rv" style="color: green;"></span><br/><br/>Sent Amount : <br/><span id="sv" style="color: red;"></span><br/><br/><center><a id="vosc" href="" target="_blank"><i class="fa fa-eye"></i> View on SoChain</a></center></div></div>');
+                  var GenerateQRCode, htmlEncode;
+    htmlEncode = function(value) {
+    return $('<div/>').text(value).html();
+  };
+  
+    
+    $('#qrimg').empty();
+    // Generate and Output QR Code
+    $('#qrimg').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chl=' + htmlEncode('dogecoin:'+$('#add').val()) + '&chs=500x500&chld=L|0');
+$("#qdn").prop("download", $('#add').val());
+$("#qdn").prop("href", $('#qrimg').attr("src")+'.jpg');
                   $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(price) {
                   $('#val').html('$' + thousands_separators(wot($.blnc*price.data.prices[0].price)));
+                   
           });
                   $.getJSON('https://chain.so/api/v2/get_address_received/DOGE/' + $('#add').val(), function(data) {
                   $('#rv').html('<b>Ð' + thousands_separators(wot(data.data.confirmed_received_value)) + '</b>');
@@ -70,8 +83,9 @@ $(document).ready(function() {
                $.vosc = "http://www.chain.so/address/DOGE/" + $('#add').val();
                $("#vosc").attr("href", $.vosc);
                });
-               
-               
+
+    
+
     });
       
 });
