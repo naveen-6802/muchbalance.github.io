@@ -27,7 +27,7 @@
     body {
       margin: 0;
       height: 100%;
-      background: #fff;
+      background: #f9fafb;
     }
     header {
       padding: 10px;
@@ -73,7 +73,7 @@
       color: white;
     }
     #rslt {
-      background: #fff;
+      background: #f9fafb;
       height: 100%;
       width: 100%;
       border:none;
@@ -95,7 +95,7 @@
       background: white;
       border-radius: 100%;
       margin: 0;
-      color: rgb(225,179,3);
+      color: #f7a602;
   }
   form .fieldset {
       position: relative;
@@ -135,12 +135,16 @@
     padding: 10px;
     font-size: 13px;
     text-align: center;
-    background:rgba(41,128,185);
+    background:rgb(37,80,250);
     border-radius: 6px;
     cursor: pointer;
+    border:1px solid rgb(37,80,250);
+    transition: all 0.13s ease;
   }
   #vosc:hover {
     text-decoration: underline;
+    background-color: white;
+    color: rgb(37,80,250);
   }
   #anim {
     position: absolute;
@@ -200,6 +204,7 @@
     transform: translate(0%,0%);
     cursor: pointer;
     font-size: 20px;
+    z-index: 999;
   }
   @media screen and (max-width: 500px) {
       #addData {
