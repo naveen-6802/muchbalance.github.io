@@ -27,7 +27,7 @@
     body {
       margin: 0;
       height: 100%;
-      background: rgb(245,245,252);
+      background: #fff;
     }
     header {
       padding: 10px;
@@ -73,7 +73,7 @@
       color: white;
     }
     #rslt {
-      background: rgb(245,247,252);
+      background: #fff;
       height: 100%;
       width: 100%;
       border:none;
