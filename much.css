@@ -176,6 +176,7 @@
       -ms-backdrop-filter:blur(6.4px);
     padding: 0;
     border:none;
+    
     bottom: -100%;
     z-index: 1000;
   }
@@ -224,101 +225,3 @@
         width: 100%;
       }
   }
-  #smsgp {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background: rgba(0,0,0,0.5);
-    backdrop-filter:blur(6.4px);
-    -webkit-backdrop-filter:blur(6.4px);
-    -ms-backdrop-filter:blur(6.4px);
-    padding: 0;
-    border:none;
-    bottom: -100%;
-    z-index: 1000;
-  }
-  .msg_form {
-      position: fixed;
-      height: 80%;
-      width: 100%;
-      background:white;
-      bottom: -100%;
-      left: 0%;
-      right: 0%;
-      word-wrap: break-word;
-      overflow-y: scroll;
-      border:none;
-      border-radius: 0px;
-      border-top-left-radius: 30px;
-      border-top-right-radius: 30px;
-      transition: all 1s ease;
-      z-index: 1001;
-    }
-    #msg_form {
-      display: block;
-      margin: auto;
-      width: 80%;
-    }
-    #username, #message, #send_message {
-      box-sizing: border-box;
-      width: 100%;
-      padding: 15px;
-      border-radius: 10px;
-      outline: 0;
-      box-shadow: rgba(0,0,0, 0.1) 0px 2px 7px;
-    }
-    #username, #message {
-      border:none;
-    }
-    #send_message {
-      cursor: pointer;
-      border:1px solid rgb(243,175,19);
-      color: rgb(243,175,19);
-      background: white;
-      font-weight: bold;
-      transition: all 0.2s ease;
-      word-wrap: break-word;
-    }
-    #send_message:hover {
-      background: linear-gradient(to left, rgb(252,213,8), rgb(243,175,19));
-      color: white;
-    }
-    .text-danger {
-      color: rgb(255,69,94);
-      padding: 10px;
-      background: rgb(255,202,208);
-      box-sizing: border-box;
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      animation: aniD 500ms ease;
-    }
-    .text-success {
-      color: rgb(26,145,70);
-      padding: 10px;
-      background: #E0F8E8;
-      box-sizing: border-box;
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      animation: aniS 100ms ease;
-    }
-    @keyframes aniD {
-      0% {
-        margin-left: -5px;
-      }
-      50% {
-        margin-left: 5px;
-      }
-      100% {
-        margin-left: 0px;
-      }
-    }
-    @keyframes aniS {
-      0% {
-        margin-top: -2px;
-      }
-      100% {
-        margin-top: 0px;
-      }
-    }
