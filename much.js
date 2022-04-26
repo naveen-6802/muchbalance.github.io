@@ -87,7 +87,38 @@ $("#qdn").prop("href", $('#qrimg').attr("src")+'.jpg');
     
 
     });
-      
+    
+    $('#msg_form').on('submit', function(event){
+  event.preventDefault();
+  var form_data = $(this).serialize();
+  $.ajax({
+   url:"send_message.php",
+   method:"POST",
+   data:form_data,
+   dataType:"JSON",
+   success:function(data)
+   {
+    if(data.error != '')
+    {
+     $('#msg_form')[0].reset();
+     $('#msg_msg').html(data.sub_msg);
+    }
+   }
+  })
+ });
+  var smsg = document.getElementById('smsg');
+  var smp = document.getElementById('smsgp');
+  var msb = document.getElementById('msb');
+  smsg.addEventListener("click", function() {
+    smp.style.bottom = "0%";
+    msb.style.bottom = "0%";
+  });
+
+  smp.addEventListener("click", function() {
+    smp.style.bottom = "-100%";
+    msb.style.bottom = "-100%";
+  });
+
 });
   $('form').on('click','.form-text + .clear-text', function(e) {
   e.preventDefault();
