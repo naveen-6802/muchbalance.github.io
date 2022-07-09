@@ -56,7 +56,7 @@
       box-shadow: rgba(255, 255, 255, 0.3) 0px 4px 12px;
       background: rgb(251,255,252);
       font-size: 14px;
-      padding-left: 20%;
+      padding-left: 16%;
       padding-right: 15%;
     }
     #add {
@@ -158,12 +158,12 @@
   }
   #anim {
     position: absolute;
-    top: 1%;
-    left: 3%;
-    background: url("dtm.png");
-    background-size: 78.125px 49.875px;
-    height: 49.875px;
-    width: 78.125px;
+    top: 20%;
+    left: 9%;
+    height: 20px;
+    width: 10px;
+    font-size: 25px;
+    cursor: pointer;
     transition: 0.5s all ease;
  }
  #more{
@@ -225,3 +225,68 @@
         width: 100%;
       }
   }
+  #preview{
+   width:290px;
+   height: 290px;
+   margin:0px auto;
+}
+  #mhqr {
+  background: rgba(0,0,0,0.4);
+  backdrop-filter:blur(6px);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 99999;
+}
+#mainqr {
+  height: 320px;
+  width: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.uqrw{
+  height: auto;
+  width: auto;
+  border-radius: 7px;
+  background: transparent;
+  padding: 0px;
+}
+.uqrw form{
+  height: auto;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.2s ease;
+}
+form .content p{
+  color: #fff;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 16px;
+}
+#meow {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  height: 290px;
+  width: 290px;
+  margin: auto;
+  display: block;
+}
+#imgqr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
