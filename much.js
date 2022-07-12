@@ -97,6 +97,7 @@ $("#qdn").prop("href", $('#qrimg').attr("src")+'.jpg');
   e.preventDefault();
   console.log('clear text.');
   $(this).prev('input').val('');
+          $("#oneb").html('');
   return false;
 });
 
