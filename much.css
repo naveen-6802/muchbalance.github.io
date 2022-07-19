@@ -105,7 +105,7 @@
       background: white;
       border-radius: 100%;
       margin: 0;
-      color: #f7a602;
+      color: rgb(242,184,22);
   }
   form .fieldset {
       position: relative;
@@ -142,19 +142,36 @@
   #vosc {
     text-decoration: none;
     color: white;
-    padding: 10px;
-    font-size: 13px;
+    padding: 7px;
+    font-size: 12px;
     text-align: center;
     background:rgb(37,80,250);
     border-radius: 6px;
     cursor: pointer;
-    border:1px solid rgb(37,80,250);
+    border:2px solid rgb(37,80,250);
     transition: all 0.13s ease;
   }
   #vosc:hover {
     text-decoration: underline;
     background-color: white;
     color: rgb(37,80,250);
+  }
+  #senddg {
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    font-size: 12px;
+    text-align: center;
+    background:rgb(242,184,22);
+    border-radius: 6px;
+    cursor: pointer;
+    border:2px solid rgb(242,184,22);
+    transition: all 0.13s ease;
+  }
+  #senddg:hover {
+    text-decoration: underline;
+    background-color: white;
+    color: rgb(242,184,22);
   }
   #anim {
     position: absolute;
