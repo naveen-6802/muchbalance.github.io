@@ -1,0 +1,392 @@
+  
+
+  * {
+      font-family: 'Open Sans', sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      height: 100%;
+      background: #f9fafb;
+    }
+    header {
+      padding: 10px;
+      position: relative;
+      background: #2c3e50;
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+    }
+    table {
+      padding: 20px;
+      width: 90%;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      width: auto;
+      overflow: auto;
+    }
+    #add {
+      padding: 15px;
+      border:0px solid white;
+      border-radius: 10px;
+      outline: 0;
+      box-shadow: rgba(255, 255, 255, 0.3) 0px 4px 12px;
+      background: rgb(251,255,252);
+      font-size: 14px;
+      padding-left: 16%;
+      padding-right: 15%;
+    }
+    #add {
+      width: 90%;
+      text-align: left;
+    }
+    #submit {
+      background-color: white;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    #submit:hover {
+      background: #000;
+      color: white;
+    }
+    #rslt {
+      background: #f9fafb;
+      height: 100%;
+      width: 100%;
+      border:none;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      margin-top: -3%;
+      position: relative;
+      z-index: 2;
+    }
+    #qrimg {
+      border:1px solid #ccc;
+      border-radius: 6px;
+      padding: 5px;
+    }
+    #qdn {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+    }
+    #mainbox {
+      position: relative;
+    }
+    form .clear-text {
+      position: absolute;
+      font-size: 28px;
+      top: 10px;
+      right: 8%;
+      text-decoration: none;
+      background: white;
+      border-radius: 100%;
+      margin: 0;
+      color: rgb(257,157,36);
+  }
+  form .fieldset {
+      position: relative;
+      margin: 10px 0;
+      width: 320px;
+  }
+  form .fieldset .form-text {
+
+  }
+  form .fieldset .form-text:required:valid:focus + .clear-text {
+      display: inline-block;
+  }
+  form .fieldset .form-text:required:invalid + .clear-text {
+      display: none;
+  }
+  form .fieldset .form-text:not([required]).valid-text:focus + .clear-text {
+      display: inline-block;
+  }
+  form .fieldset .form-text:not([required]):not(.valid-text) + .clear-text {
+      display: none;
+  }
+  #addData {
+    padding: 0px;
+    width: 50%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    text-align: left;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    word-wrap: break-word;
+  }
+  #vosc {
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    font-size: 12px;
+    text-align: center;
+    background:rgb(37,80,250);
+    border-radius: 6px;
+    cursor: pointer;
+    border:2px solid rgb(37,80,250);
+    transition: all 0.13s ease;
+  }
+  #vosc:hover {
+    text-decoration: underline;
+    background-color: white;
+    color: rgb(37,80,250);
+  }
+  #senddg {
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    font-size: 12px;
+    text-align: center;
+    background:rgb(247,147,26);
+    border-radius: 6px;
+    cursor: pointer;
+    border:2px solid rgb(247,147,26);
+    transition: all 0.13s ease;
+  }
+  #senddg:hover {
+    text-decoration: underline;
+    background-color: white;
+    color: rgb(247,147,26);
+  }
+  #anim {
+    position: absolute;
+    top: 20%;
+    left: 9%;
+    height: 20px;
+    width: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.5s all ease;
+ }
+ #more{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+      backdrop-filter:blur(6.4px);
+      -webkit-backdrop-filter:blur(6.4px);
+      -ms-backdrop-filter:blur(6.4px);
+    padding: 0;
+    border:none;
+    
+    bottom: -100%;
+    z-index: 1000;
+  }
+  #mmc {
+    position: fixed;
+    height: 80%;
+    width: 100%;
+    background:white;
+    bottom: -100%;
+    left: 0%;
+    right: 0%;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    border:none;
+    border-radius: 0px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    transition: all 1s ease;
+    z-index: 1001;
+  }
+  #mmchdr {
+    padding: 5px;
+    text-align: center;
+    border:none;
+    border-bottom: 1px solid #ccc;
+  }
+  #cdts, #uses, #abtus {
+    padding: 20px;
+    width: 100%;
+  }
+  #shmm {
+    position: absolute;
+    bottom: -1%;
+    right: 0%;
+    transform: translate(0%,0%);
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 999;
+  }
+  @media screen and (max-width: 500px) {
+      #addData {
+        width: 90%;
+      }
+      #mmc {
+        height: 70%;
+        width: 100%;
+      }
+  }
+  #preview{
+   width:290px;
+   height: 290px;
+   margin:0px auto;
+}
+  #mhqr {
+  background: rgba(0,0,0,0.4);
+  backdrop-filter:blur(6px);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 99999;
+}
+#mainqr {
+  height: 320px;
+  width: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.uqrw{
+  height: auto;
+  width: auto;
+  border-radius: 7px;
+  background: transparent;
+  padding: 0px;
+}
+.uqrw form{
+  height: auto;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.2s ease;
+}
+form .content p{
+  color: #fff;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 16px;
+}
+#meow {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  height: 290px;
+  width: 290px;
+  margin: auto;
+  display: block;
+}
+#imgqr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#tools {
+      background: rgba(0,0,0, 0.5);
+      height: 100%;
+      width: 100%;
+      padding: 20px;
+      backdrop-filter:blur(6.4px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99999;
+      display: none;
+      overflow-y: auto;
+    }
+    #usd-doge, #qrgenerator {
+      padding: 10px;
+      background: #fff;
+      width: 32%;
+      border-radius:15px;
+      position: relative;
+      border:1px solid #ccc;
+      display: block;
+      margin: auto;
+    }
+    #inuf {
+      padding: 1px;
+      background: transparent;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+    }
+    #dogv, #dolv, #clrud {
+      padding: 10px;
+      width: 90%;
+      outline: none;
+      background: white;
+      border: none;
+      box-sizing: border-box;
+      display: block;
+      margin: auto;
+      border-radius: 10px;
+      margin-top: 10px;
+      border:1px solid #ccc;
+    }
+    #nadd,#amnt,#generate, #qclr {
+      padding: 10px;
+      width: 90%;
+      outline: none;
+      background: white;
+      border: none;
+      box-sizing: border-box;
+      display: block;
+      margin: auto;
+      border-radius: 10px;
+      border:1px solid #ccc;
+    }
+    #clrud, #generate, #qclr {
+      cursor: pointer;
+    }
+    #generate, #qclr {
+      width: 40%;
+    }
+    #generate:hover {
+      border-color: rgb(26,145,70);
+    }
+    #qclr, #clrud {
+      color:rgb(255,69,94);
+    }
+    #qclr:hover, #clrud:hover {
+      border-color: rgb(255,69,94);
+    }
+    @media screen and (max-width: 500px) {
+      #usd-doge,#qrgenerator {
+        width: 95%;
+      }
+    }
+    #damta {
+      display: block;
+      margin: auto;
+    }
+    #ndq {
+      color: black;
+    }
+    #qttp {
+      position: relative;
+      display: inline-block;
+    }
+    #qttp .ttptxt {
+      visibility: hidden;
+      width: 200px;
+      background-color: #717171;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 100%;
+      left: 50%;
+      margin-left: -100px;
+      padding: 10px;
+    }
+    #qttp:hover .ttptxt {
+      visibility: visible;
+    }
