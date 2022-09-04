@@ -307,3 +307,107 @@ form .content p{
   left: 50%;
   transform: translate(-50%,-50%);
 }
+#tools {
+      background: rgba(0,0,0, 0.5);
+      height: 100%;
+      width: 100%;
+      padding: 20px;
+      backdrop-filter:blur(6.4px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99999;
+      display: none;
+      overflow-y: auto;
+    }
+    #usd-doge, #qrgenerator {
+      padding: 10px;
+      background: #fff;
+      width: 32%;
+      border-radius:15px;
+      position: relative;
+      border:1px solid #ccc;
+      display: block;
+      margin: auto;
+    }
+    #inuf {
+      padding: 1px;
+      background: transparent;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+    }
+    #dogv, #dolv, #clrud {
+      padding: 10px;
+      width: 90%;
+      outline: none;
+      background: white;
+      border: none;
+      box-sizing: border-box;
+      display: block;
+      margin: auto;
+      border-radius: 10px;
+      margin-top: 10px;
+      border:1px solid #ccc;
+    }
+    #nadd,#amnt,#generate, #qclr {
+      padding: 10px;
+      width: 90%;
+      outline: none;
+      background: white;
+      border: none;
+      box-sizing: border-box;
+      display: block;
+      margin: auto;
+      border-radius: 10px;
+      border:1px solid #ccc;
+    }
+    #clrud, #generate, #qclr {
+      cursor: pointer;
+    }
+    #generate, #qclr {
+      width: 40%;
+    }
+    #generate:hover {
+      border-color: rgb(26,145,70);
+    }
+    #qclr, #clrud {
+      color:rgb(255,69,94);
+    }
+    #qclr:hover, #clrud:hover {
+      border-color: rgb(255,69,94);
+    }
+    @media screen and (max-width: 500px) {
+      #usd-doge,#qrgenerator {
+        width: 95%;
+      }
+    }
+    #damta {
+      display: block;
+      margin: auto;
+    }
+    #ndq {
+      color: black;
+    }
+    #qttp {
+      position: relative;
+      display: inline-block;
+    }
+    #qttp .ttptxt {
+      visibility: hidden;
+      width: 200px;
+      background-color: #717171;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 100%;
+      left: 50%;
+      margin-left: -100px;
+      padding: 10px;
+    }
+    #qttp:hover .ttptxt {
+      visibility: visible;
+    }
