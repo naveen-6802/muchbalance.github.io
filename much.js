@@ -94,26 +94,26 @@ $("#qdn").prop("href", $('#qrimg').attr("src")+'.jpg');
     });
       
 });
-function thousands_separators(num)
+function thousands_separatorsH(num)
   {
     var num_parts = num.toString().split(".");
     num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return num_parts.join(".");
   }
-  function wot(ae) {
-    fnum = parseFloat(ae).toFixed(4);
-    return fnum;
+  function loAt(be) {
+    numf = parseFloat(be).toFixed(4);
+    return numf;
   }
    $('#dolv').on('input', function() {
       $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(daata) {
-                  $("#dogv").val(thousands_separators(wot($("#dolv").val()/daata.data.prices[0].price)));
+                  $("#dogv").val(thousands_separatorsH(loAt($("#dolv").val()/daata.data.prices[0].price)));
                    
           });
    });
    
    $('#dogv').on('input', function() {
       $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(daata) {
-                  $("#dolv").val(thousands_separators(wot($("#dogv").val()*daata.data.prices[0].price)));
+                  $("#dolv").val(thousands_separatorsH(loAt($("#dogv").val()*daata.data.prices[0].price)));
                    
           });
    });
