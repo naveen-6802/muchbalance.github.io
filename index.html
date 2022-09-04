@@ -115,9 +115,35 @@
 <br/><br/>
 </center>
 </header>
-
-<div id="rslt">
+<div id="tools">
+  <ion-icon name="close-circle" style="position: absolute;color: white;right: 3%;top: 2%;font-size: 25px;cursor: pointer;" onclick="document.getElementById('tools').style.display='none';"></ion-icon>
 <br/><br/>
+<div id="usd-doge">
+  <ion-icon name="swap-vertical-outline" style="font-size: 15px;padding: 5px;background: white;border-radius: 50%;position: absolute;z-index: 100;top: 46%;left: 50%;transform: translate(-50%,-46%);border: 3px solid #ccc;"></ion-icon>
+  <span style="padding-left: 14px;font-size: 15px;">USD to DOGE converter</span>
+  <div id="inuf"><input type="text" id="dolv" name="" placeholder="0.00"><img src="usd.png" style="position: absolute;height: 25px;width: 25px;z-index: 100;top: 35%;right: 8%;"></div>
+  <div id="inuf"><input type="text" id="dogv" name="" placeholder="0.00"><img src="dogecoin-300.png" style="position: absolute;height: 25px;width: 25px;z-index: 100;top: 35%;right: 8%;"></div>
+  <button id="clrud">Reset</button>
+</div>
+
+<br/><br/>
+
+
+<div id="qrgenerator">
+  <span style="padding-left: 14px;font-size: 15px;">Fix amount QR Generator <div id="qttp"><i class="fa fa-question-circle"></i><span class="ttptxt">When someone scans a fix/set amount QR Code, a amount that was set by user will be automatically inputted in sender's input field.</span></div></span><br/><br/>
+<input type="text" id="nadd" name="query" placeholder="Address"><br/>
+<input type="text" id="amnt" name="" placeholder="Amount in DOGE" disabled=""><br/>
+<div style="display: flex;justify-content: space-around;width: 100%;">
+<button id="generate" disabled="" style="color: #ccc;">Generate</button>
+<button id="qclr">Reset</button>
+</div>
+<div id="damta"></div>
+</div>
+
+</div>
+<div id="rslt">
+<br/>
+<center><button style="background: #ecf0f1;border: none;border-radius: 10px;padding: 6px;padding-left:12px;padding-right:12px;font-size: 13px;cursor: pointer;" onclick="document.getElementById('tools').style.display = 'block';">Tools &nbsp;<i class="fa fa-cog" aria-hidden="true"></i> </button></center>
 <div id="oneb">
   
 </div>
@@ -125,14 +151,15 @@
 </div>  
 </div>
 
+
 <span id="shmm"><img src="clcm.png" height="85" width="85" alt="Click me Doge"></span>
 
 <div id="more"> </div>
 <div id="mmc">
-      <div id="mmchdr"><h3>Credits, Use & About</h3></div>
+      <div id="mmchdr"><h3>Use, Credits & About</h3></div>
       
       <div id="uses">
-        <p style="color: green;"><strong>Note - Use only DOGECOIN network to withdraw your dogecoins from exchanges to your wallet. If you will use another network(other than doge), those dogecoins will no longer remain real. So please ensure before withdrawing, that you are withdrawing your coins through dogecoin network(This may charge you little bit more fees compared to any other network, but this will keep your dogecoins real).</strong></p>
+        <p style="color: green;"><strong>Note - Use only DOGECOIN network to withdraw your dogecoins from exchanges to your wallet. If you will use any other network(not dogecoin network), those dogecoins will no longer remain real. So please ensure before withdrawing, that you are withdrawing your coins through dogecoin network(This may charge you little bit more fees compared to any other network, but this will keep your dogecoins real).</strong></p>
         
         <h4>Use : </h4>
         <p>By entering your dogecoin address in input field, you will get your - dogecoin wallet balance in dogecoin & in USD, a QR Code of your address, received amount in dogecoin, spent amount in dogecoin.</p>
@@ -149,7 +176,7 @@
         <p>QR Code scanning is possible using Instascan & qrserver.</p>
         <p>The logo image of dogecoin is used from <a href="http://www.dogecoin.com/" target="_blank">Dogecoin</a>'s official website(Their official logo). Logo image credits goes to them.</p>
         <p>The header image in which Doge sitting on the moon is used from reddit - <a href="https://www.reddit.com/r/dogecoin/comments/mwd00e/4k_moon_doge_wallpaper/" target="_blank">Source</a></p>
-        <p>Remaining three images - 1. Dancing Doge & 2. Click Me Doge are used from somewhere on internet, credit goes to their respective owners/makers.</p>
+        <p>Remaining two images - 1. Dancing Doge & 2. Click Me Doge are used from somewhere on internet, credit goes to their respective owners/makers.</p>
       </div>
 
       <div id="abtus">
