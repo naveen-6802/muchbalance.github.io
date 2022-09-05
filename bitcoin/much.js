@@ -25,11 +25,11 @@ var mm = document.getElementById("more");
   }
 $(document).ready(function() {
   $.getJSON('https://chain.so/api/v2/get_price/BTC/USD', function(price) {
-                  $('#price').html('$' + PP(price.data.prices[1].price));
+                  $('#price').html('$' + PP(price.data.prices[0].price));
   });
   $('#refp').click(function() {
     $.getJSON('https://chain.so/api/v2/get_price/BTC/USD', function(price) {
-                  $('#price').html('$' + PP(price.data.prices[1].price));
+                  $('#price').html('$' + PP(price.data.prices[0].price));
   });
   });
                
