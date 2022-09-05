@@ -40,11 +40,11 @@ var mm = document.getElementById("more");
 
 $(document).ready(function() {
   $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(price) {
-                  $('#price').html('$' + price.data.prices[0].price);
+                  $('#price').html('$' + price.data.prices[1].price);
   });
   $('#refp').click(function() {
     $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(price) {
-                  $('#price').html('$' + price.data.prices[0].price);
+                  $('#price').html('$' + price.data.prices[1].price);
   });
   });
                
