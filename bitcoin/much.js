@@ -89,6 +89,10 @@ function thousands_separatorsH(num)
     numf = parseFloat(be).toFixed(6);
     return numf;
   }
+  function lAt(ce) {
+    numf = parseFloat(be).toFixed(6);
+    return numf;
+  }
    $('#dolv').on('input', function() {
       $.getJSON('https://chain.so/api/v2/get_price/BTC/USD', function(daata) {
                   $("#dogv").val(thousands_separatorsH(loAt($("#dolv").val()/daata.data.prices[0].price)));
@@ -98,7 +102,7 @@ function thousands_separatorsH(num)
    
    $('#dogv').on('input', function() {
       $.getJSON('https://chain.so/api/v2/get_price/BTC/USD', function(daata) {
-                  $("#dolv").val(thousands_separatorsH(loAt($("#dogv").val()*daata.data.prices[0].price)));
+                  $("#dolv").val(thousands_separatorsH(lAt($("#dogv").val()*daata.data.prices[0].price)));
                    
           });
    });
