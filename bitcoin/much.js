@@ -90,7 +90,7 @@ function thousands_separatorsH(num)
     return numf;
   }
   function lAt(ce) {
-    numf = parseFloat(ce).toFixed(6);
+    numf = parseFloat(ce).toFixed(2);
     return numf;
   }
    $('#dolv').on('input', function() {
