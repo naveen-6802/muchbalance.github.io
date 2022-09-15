@@ -1,6 +1,6 @@
 Use :
 
-By entering your dogecoin/bitcoin address in input field, you will get your - dogecoin/bitcoin wallet balance in bitcoin & in USD, a QR Code of your address, received amount in dogecoin/bitcoin, spent amount in dogecoin/bitcoin.
+By entering your dogecoin/bitcoin address in input field, you will get your - dogecoin/bitcoin wallet balance in dogecoin/bitcoin & in USD, a QR Code of your address, received amount in dogecoin/bitcoin, spent amount in dogecoin/bitcoin.
 
 You can also scan dogecoin/bitcoin QR Codes or upload QR Codes and this website will automatically detect the dogecoin/bitcoin address and will show you that address's data.
 
