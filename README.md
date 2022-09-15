@@ -8,7 +8,7 @@ There is an refresh button just after price shown in USD, by clicking on that bu
 
 I also added two tools by which you can convert USD to DOGE/BTC or DOGE/BTC to USD instantly & can generate a fix dogecoin/bitcoin amount QR Code of any dogecoin/bitcoin address.
 
-This website can behave like a mobile app, just add it to your homescreen(Click on 3 dots or on menu in your browser and there will be a option Add To Home Screen), and now you can use it like an app.
+This website can work like a mobile app, just add it to your homescreen(Click on 3 dots or on menu in your browser and there will be a option Add To Home Screen), and now you can use it like an app.
 
 
 Credits :
