@@ -155,6 +155,7 @@ function thousands_separatorsH(num)
   e.preventDefault();
   console.log('clear text.');
   $(this).prev('input').val('');
+  $(this).prev('input').focus();
   $("#oneb").html('');
   return false;
 });
