@@ -70,6 +70,9 @@
       color: black;
       font-size: 16px;
     }
+    #tellAdd {
+      font-size: 13px;
+    }
     #mainbox {
       position: relative;
     }
@@ -217,6 +220,9 @@
       #mmc {
         height: 70%;
         width: 100%;
+      }
+      #tellAdd {
+        font-size: 11px;
       }
   }
   #preview{
