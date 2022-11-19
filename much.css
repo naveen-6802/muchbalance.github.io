@@ -84,7 +84,7 @@
       z-index: 2;
     }
     #qrimg {
-      border:1px solid #ccc;
+      border:1px solid #fff;
       border-radius: 6px;
       padding: 5px;
     }
@@ -92,6 +92,9 @@
       text-decoration: none;
       color: black;
       font-size: 16px;
+    }
+    #tellAdd {
+      font-size: 13px;
     }
     #mainbox {
       position: relative;
@@ -240,6 +243,9 @@
       #mmc {
         height: 70%;
         width: 100%;
+      }
+      #tellAdd {
+        font-size: 11px;
       }
   }
   #preview{
