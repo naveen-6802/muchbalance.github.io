@@ -1,24 +1,4 @@
-/*
-        ░░░░░░░░░▄░░░░░░░░░░░░░░▄
-        ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌ 
-        ░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐
-        ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
-        ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
-        ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌
-        ░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒▌ so source
-        ░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
-        ░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄▌
-        ░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▌
-        ▌▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒▐ much code
-        ▐▒▒▐▀▐▀▒░▄▄▒▄▒▒▒▒▒▒░▒░▒░▒▒▒▒▌
-        ▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒▒▒░▒░▒░▒▒▐
-        ░▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒░▒░▒░▒░▒▒▒▌
-        ░▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▄▒▒▐ how do you accessed ? wow
-        ░░▀▄▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▄▒▒▒▒▌
-        ░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀
-        ░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀
-        ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀ 
-    */
+
     var mqrs = document.getElementById("minqrs");
   mqrs.addEventListener("click", function() {
     scanner.stop();
@@ -37,14 +17,19 @@ var mm = document.getElementById("more");
     mm.style.bottom = "-100%";
     shmm.style.bottom = "-100%";
   });
-
+ function PP(num)
+  {
+    var num_parts = num.toString().split(".");
+    num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return num_parts.join(".");
+  }
 $(document).ready(function() {
-  $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(price) {
-                  $('#price').html('$' + price.data.prices[0].price);
+  $.getJSON('https://chain.so/api/v2/get_price/BTC/USD', function(price) {
+                  $('#price').html('$' + PP(price.data.prices[0].price));
   });
   $('#refp').click(function() {
-    $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(price) {
-                  $('#price').html('$' + price.data.prices[0].price);
+    $.getJSON('https://chain.so/api/v2/get_price/BTC/USD', function(price) {
+                  $('#price').html('$' + PP(price.data.prices[0].price));
   });
   });
                
@@ -56,13 +41,17 @@ $(document).ready(function() {
     return num_parts.join(".");
   }
   function wot(ae) {
+    fnum = parseFloat(ae).toFixed(6);
+    return fnum;
+  }
+  function wotpp(ae) {
     fnum = parseFloat(ae).toFixed(2);
     return fnum;
   }
 
-               $.getJSON('https://chain.so/api/v2/get_address_balance/DOGE/' + $('#add').val(), function(data) {
+               $.getJSON('https://chain.so/api/v2/get_address_balance/BTC/' + $('#add').val(), function(data) {
                 $.blnc = data.data.confirmed_balance;
-                  $('#oneb').html('<br/><div id="addData" style="overflow:hidden;"><div style="margin: 0;padding: 0;display: flex;justify-content: space-between;border:none;border-bottom:0px solid #ccc;background: rgb(37,80,250);border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;"><div style="display:block;padding:5px;float: left;"><div style="padding-left: 20px;padding-top: 5px;"><p style="font-size: 13px;color: white;">Identified using <strong><a href="https://chain.so" target="_blank" style="color: #fff;text-decoration: underline;">SoChain</a></strong></p><b><p id="tellAdd" style="color: white;"></p></b></div></div><div style="padding:10px;padding-top: 20px;" id="qrcode"><img id="qrimg" height="50" width="50" style="background: white;" /><center><a id="qdn"><ion-icon name="arrow-down-circle" style="color:#fff;"></ion-icon></a></center></div></div><br/><div style="padding:5px;"><div style="padding-left: 20px;"><span style="color:#525b54;">Total Balance :</span><br/><span style="color: #000;font-size: 20px;"><b>Ð' + thousands_separators(wot($.blnc)) + '</b></span><span id="val" style="color: rgba(0,0,0,0.8);font-size:13px;"></span></div></div><br/></div><br/><div id="addData"><div style="display: block;margin: auto;padding: 25px;"><span>Received Amount : </span><br/><span id="rv" style="color: rgb(26,145,70);"></span><span id="rvv" style="color: rgba(0,0,0,0.8);font-size:13px;"></span><br/><br/><span>Sent Amount : </span><br/><span id="sv" style="color: rgb(255,69,94);"></span><span id="svv" style="color: rgba(0,0,0,0.8);font-size:13px;"></span><br/><br/><center style="display:flex;justify-content:space-around;"><a id="vosc" href="" target="_blank"><i class="fa fa-eye"></i> View on DogeChain</a><a id="senddg" href="">Ð Send Dogecoin</a></center></div></div><br/><br/><br/>');
+                  $('#oneb').html('<br/><div id="addData" style="overflow:hidden;"><div style="margin: 0;padding: 0;display: flex;justify-content: space-between;border:none;border-bottom:0px solid #ccc;background: rgb(37,80,250);border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;"><div style="display:block;padding:5px;float: left;"><div style="padding-left: 20px;padding-top: 5px;"><p style="font-size: 13px;color: white;">Identified using <strong><a href="https://chain.so" target="_blank" style="color: #fff;text-decoration: underline;">SoChain</a></strong></p><b><p id="tellAdd" style="color: white;"></p></b></div></div><div style="padding:10px;padding-top: 20px;" id="qrcode"><img id="qrimg" height="50" width="50" style="background: white;" /><center><a id="qdn"><ion-icon name="arrow-down-circle" style="color:#fff;"></ion-icon></a></center></div></div><br/><div style="padding:5px;"><div style="padding-left: 20px;"><span style="color:#525b54;">Total Balance :</span><br/><span style="color: #000;font-size: 20px;"><b>₿' + thousands_separators(wot($.blnc)) + '</b></span><span id="val" style="color: rgba(0,0,0,0.8);font-size:13px;"></span></div></div><br/></div><br/><div id="addData"><div style="display: block;margin: auto;padding: 25px;"><span>Received Amount : </span><br/><span id="rv" style="color: rgb(26,145,70);"></span><span id="rvv" style="color: rgba(0,0,0,0.8);font-size:13px;"></span><br/><br/><span>Sent Amount : </span><br/><span id="sv" style="color: rgb(255,69,94);"></span><span id="svv" style="color: rgba(0,0,0,0.8);font-size:13px;"></span><br/><br/><center style="display:flex;justify-content:space-around;"><a id="vosc" href="" target="_blank"><i class="fa fa-eye"></i> View on Blockchain</a><a id="senddg" href="">₿ Send Bitcoin</a></center></div></div><br/><br/><br/>');
                   var GenerateQRCode, htmlEncode;
     htmlEncode = function(value) {
     return $('<div/>').text(value).html();
@@ -71,30 +60,30 @@ $(document).ready(function() {
     
     $('#qrimg').empty();
     // Generate and Output QR Code
-    $('#qrimg').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chl=' + htmlEncode('dogecoin:'+$('#add').val()) + '&chs=500x500&chld=L|0');
+    $('#qrimg').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chl=' + htmlEncode('bitcoin:'+$('#add').val()) + '&chs=500x500&chld=L|0');
 $("#qdn").prop("download", $('#add').val());
 $("#qdn").prop("href", $('#qrimg').attr("src")+'.jpg');
-                  $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(price) {
-                  $('#val').html('&nbsp;($' + thousands_separators(wot($.blnc*price.data.prices[0].price)) + ')');
+                  $.getJSON('https://chain.so/api/v2/get_price/BTC/USD', function(price) {
+                  $('#val').html('&nbsp;($' + thousands_separators(wotpp($.blnc*price.data.prices[0].price)) + ')');
                    
           });
-                  $.getJSON('https://chain.so/api/v2/get_address_received/DOGE/' + $('#add').val(), function(data) {
-                  $('#rv').html('<b>Ð' + thousands_separators(wot(data.data.confirmed_received_value)) + '</b>');
-                  $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(price) {
+                  $.getJSON('https://chain.so/api/v2/get_address_received/BTC/' + $('#add').val(), function(data) {
+                  $('#rv').html('<b>₿' + thousands_separators(wot(data.data.confirmed_received_value)) + '</b>');
+                  $.getJSON('https://chain.so/api/v2/get_price/BTC/USD', function(price) {
                   $.rv = data.data.confirmed_received_value;
-                  $('#rvv').html('&nbsp;($' + thousands_separators(wot($.rv*price.data.prices[0].price)) + ')');
+                  $('#rvv').html('&nbsp;($' + thousands_separators(wotpp($.rv*price.data.prices[0].price)) + ')');
                   });
                });
-               $.getJSON('https://chain.so/api/v2/get_address_spent/DOGE/' + $('#add').val(), function(data) {
-                  $('#sv').html('<b> Ð' + thousands_separators(wot(data.data.confirmed_sent_value)) + '</b>');
-                  $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(price) {
+               $.getJSON('https://chain.so/api/v2/get_address_spent/BTC/' + $('#add').val(), function(data) {
+                  $('#sv').html('<b>₿' + thousands_separators(wot(data.data.confirmed_sent_value)) + '</b>');
+                  $.getJSON('https://chain.so/api/v2/get_price/BTC/USD', function(price) {
                   $.sv = data.data.confirmed_sent_value;
-                  $('#svv').html('&nbsp;($' + thousands_separators(wot($.sv*price.data.prices[0].price)) + ')');
+                  $('#svv').html('&nbsp;($' + thousands_separators(wotpp($.sv*price.data.prices[0].price)) + ')');
                   });
                });
-               $.vosc = "http://www.dogechain.info/address/" + $('#add').val();
+               $.vosc = "https://www.blockchain.com/btc/address/" + $('#add').val();
                $("#vosc").attr("href", $.vosc);
-               $.senddg = "dogecoin:"+$("#add").val();
+               $.senddg = "bitcoin:"+$("#add").val();
                $("#senddg").attr("href", $.senddg);
                });
 
@@ -109,19 +98,23 @@ function thousands_separatorsH(num)
     return num_parts.join(".");
   }
   function loAt(be) {
-    numf = parseFloat(be).toFixed(4);
+    numf = parseFloat(be).toFixed(6);
+    return numf;
+  }
+  function lAt(ce) {
+    numf = parseFloat(ce).toFixed(2);
     return numf;
   }
    $('#dolv').on('input', function() {
-      $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(daata) {
+      $.getJSON('https://chain.so/api/v2/get_price/BTC/USD', function(daata) {
                   $("#dogv").val(thousands_separatorsH(loAt($("#dolv").val()/daata.data.prices[0].price)));
                    
           });
    });
    
    $('#dogv').on('input', function() {
-      $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(daata) {
-                  $("#dolv").val(thousands_separatorsH(loAt($("#dogv").val()*daata.data.prices[0].price)));
+      $.getJSON('https://chain.so/api/v2/get_price/BTC/USD', function(daata) {
+                  $("#dolv").val(thousands_separatorsH(lAt($("#dogv").val()*daata.data.prices[0].price)));
                    
           });
    });
@@ -130,7 +123,7 @@ function thousands_separatorsH(num)
       $("#dolv").val("");
    });
    $('#nadd').on('input', function() {
-      $.getJSON('https://chain.so/api/v2/get_address_balance/DOGE/' + $('#nadd').val(), function(daata) {
+      $.getJSON('https://chain.so/api/v2/get_address_balance/BTC/' + $('#nadd').val(), function(daata) {
         
         $("#amnt").removeAttr("disabled");
         $("#generate").removeAttr("disabled");
@@ -143,7 +136,7 @@ function thousands_separatorsH(num)
     htmlEncode = function(value) {
     return $('<div/>').text(value).html();
   };
-      $('#qrimgz').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chl='+htmlEncode('dogecoin:'+$('#nadd').val()+'?amount='+$('#amnt').val())+'&chs=500x500&chld=L|0.png');
+      $('#qrimgz').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chl='+htmlEncode('bitcoin:'+$('#nadd').val()+'?amount='+$('#amnt').val())+'&chs=500x500&chld=L|0.png');
       $("#ndq").prop("href", $('#qrimgz').attr("src")+'.jpg');
                    
           });
@@ -233,7 +226,7 @@ var scanner = new Instascan.Scanner({ video: document.getElementById('preview'),
   scanner.addListener('scan',function(content){
     $("#add").val(content);
     var timer = 0;
-    var sensor_word = ['dogecoin:', 'dogecoin: ', 'dogecoin', ':','DOGECOIN:','DOGECOIN'];
+    var sensor_word = ['bitcoin:', 'bitcoin: ', 'bitcoin', ':','bitcoin:','BITCOIN'];
     var sensor_replace = ['', '', '','','',''];
 
     
@@ -302,7 +295,7 @@ function fetchRequest(file, formData) {
         document.getElementById("add").value = result+'';
         
         var timer = 0;
-    var sensor_word = ['dogecoin:', 'dogecoin: ', 'dogecoin', ':','DOGECOIN:','DOGECOIN'];
+    var sensor_word = ['bitcoin:', 'bitcoin: ', 'bitcoin', ':','bitcoin:','BITCOIN'];
     var sensor_replace = ['', '', '','','',''];
 
     
