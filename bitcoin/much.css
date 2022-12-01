@@ -118,6 +118,8 @@
     text-align: left;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     word-wrap: break-word;
+    border:1px solid rgb(37,80,250);
+    margin:0 auto;
   }
   #vosc {
     text-decoration: none;
@@ -130,6 +132,7 @@
     cursor: pointer;
     border:2px solid rgb(37,80,250);
     transition: all 0.13s ease;
+    width: 49%;
   }
   #vosc:hover {
     text-decoration: underline;
@@ -142,11 +145,12 @@
     padding: 7px;
     font-size: 12px;
     text-align: center;
-    background:rgb(247,147,26);
+    background:rgb(242,184,22);
     border-radius: 6px;
     cursor: pointer;
-    border:2px solid rgb(247,147,26);
+    border:2px solid rgb(242,184,22);
     transition: all 0.13s ease;
+    width: 49%;
   }
   #senddg:hover {
     text-decoration: underline;
@@ -223,6 +227,9 @@
       }
       #tellAdd {
         font-size: 11px;
+      }
+      #vosc, #senddg {
+        width: auto;
       }
   }
   #preview{
