@@ -1,0 +1,93 @@
+body.lightTheme {
+    background: #f9fafb;
+}
+.lightTheme #rslt {
+	background: #f9fafb;
+}
+.lightTheme .tBtn {
+	background: rgb(231,235,236);
+	color: #000;
+}
+.lightTheme #add {
+	background: #fff;
+	color: black;
+	box-shadow: rgba(28, 41, 56, 0.3) 0px 4px 12px;
+}
+.lightTheme #add::placeholder {
+	color: rgba(0,0,0,0.8);
+}
+.lightTheme #nscn {
+	color: black;
+}
+.lightTheme #addData {
+	background: white;
+    color: black;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 4px 12px;
+    border-color: rgb(37,80,250);
+}
+.lightTheme #saData {
+	background: rgb(37,80,250);
+}
+.lightTheme #totalBalance {
+	color: #525b54;
+}
+.lightTheme #showingBalance {
+	color: black;
+}
+.lightTheme #val, .lightTheme #rvv, .lightTheme #svv {
+	color: rgba(0,0,0,0.8);
+}
+.lightTheme #vosc:hover, .lightTheme #senddg:hover {
+	background: transparent;
+}
+.lightTheme #usd-doge, .lightTheme #qrgenerator{
+	background: rgb(229,229,229);
+	color: black;
+	border:1px solid transparent;
+}
+.lightTheme #swpIcn {
+	background: white;
+	border:	3px solid rgb(229,229,229);
+	color: black;
+}
+.lightTheme #inuf input {
+	background: white;
+	color: black;
+	border:1px solid transparent;
+}
+.lightTheme #clrud, .lightTheme #qclr {
+	border:1px solid transparent;
+	background: white;
+}
+.lightTheme #clrud:hover, .lightTheme #qclr:hover {
+	background: rgb(255,69,94);
+	color: white;
+	border:1px solid rgb(255,69,94);
+}
+.lightTheme #generate {
+	background:#fff;
+	border:1px solid transparent;
+	color: #ccc;
+}
+.lightTheme #generate:hover {
+    border-color: rgb(26,145,70);
+}
+.lightTheme #ndq {
+	color: black;
+}
+.lightTheme #qttp .ttptxt {
+	background: #717171;
+}
+.lightTheme #mmc {
+	background: white;
+	color: black;
+}
+.lightTheme #mmc a {
+	color: rgb(37,80,250);
+}
+.lightTheme #mmchdr {
+	border-color: #ccc;
+}
+.lightTheme #fcbc {
+	color: black;
+}
