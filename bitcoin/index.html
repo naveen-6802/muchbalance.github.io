@@ -23,7 +23,8 @@
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="much.css">
+  <link rel="stylesheet" type="text/css" href="../much.css">
+  <link rel="stylesheet" type="text/css" href="../lightTheme.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJWRT04T37"></script>
 <script>
@@ -39,7 +40,7 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 </head>
-<body>
+<body class="lightTheme">
   
 <h1 style="position: absolute;left: 50%;top: 0%;transform: translate(-50%,-0%);visibility: hidden;">Bitcoin MuchBalance</h1>
 
@@ -52,10 +53,10 @@
 <video id="preview"></video>
 <br/><br/>
 <div style="margin: auto;display: block;position: absolute;left: 50%;transform: translate(-50%);display: flex;width: 100%;justify-content: center;">
-  <label>
+  <label id="fcbc">
   <input type="radio" name="options" value="1" autocomplete="off"> Front Camera
   </label>
-  <label>
+  <label id="fcbc">
   <input type="radio" name="options" value="2" autocomplete="off"> Back Camera
   </label>
 </div>
@@ -76,7 +77,7 @@
 </div>
 
 <div>
-<header>
+<header style="background: #2c3e50;">
   
   <div>
   <img src="bitcoin.png" alt="Bitcoin Logo" height="50" width="50" style="margin-left: 3%;" />
@@ -86,7 +87,7 @@
 <center>
 <form action="javascript:void(0);">
   <div class="fieldset">
-    <div id="anim"><ion-icon name="scan" style=""></ion-icon></div>
+    <div id="anim"><ion-icon name="scan" id="nscn"></ion-icon></div>
     <input type="text" id="add" name="query" required placeholder="Enter bitcoin address" class="form-text" autofocus>
     <a href="#" class="clear-text material-icons">cancel</a>
   </div>
@@ -98,7 +99,7 @@
   <ion-icon name="close-circle" style="position: absolute;color: white;right: 3%;top: 2%;font-size: 25px;cursor: pointer;" onclick="document.getElementById('tools').style.display='none';"></ion-icon>
 <br/><br/><br/>
 <div id="usd-doge">
-  <ion-icon name="swap-vertical-outline" style="font-size: 15px;padding: 5px;background: white;border-radius: 50%;position: absolute;z-index: 100;top: 46%;left: 50%;transform: translate(-50%,-46%);border: 3px solid #ccc;"></ion-icon>
+  <ion-icon name="swap-vertical-outline" id="swpIcn"></ion-icon>
   <span style="padding-left: 14px;font-size: 15px;">USD to BTC converter</span>
   <div id="inuf"><input type="text" id="dolv" name="" placeholder="0.00"><img src="usd.png" style="position: absolute;height: 25px;width: 25px;z-index: 100;top: 35%;right: 8%;"></div>
   <div id="inuf"><input type="text" id="dogv" name="" placeholder="0.00"><img src="bitcoin.png" style="position: absolute;height: 25px;width: 25px;z-index: 100;top: 35%;right: 8%;"></div>
@@ -110,8 +111,8 @@
 
 <div id="qrgenerator">
   <span style="padding-left: 14px;font-size: 15px;">Fix amount QR Generator <div id="qttp"><i class="fa fa-question-circle"></i><span class="ttptxt">When someone scans a fix/set amount QR Code, a amount that was set by user will be automatically inputted in sender's input field.</span></div></span><br/><br/>
-<input type="text" id="nadd" name="query" placeholder="Address"><br/>
-<input type="text" id="amnt" name="" placeholder="Amount of BTC" disabled=""><br/>
+<div id="inuf"><input type="text" id="nadd" name="query" placeholder="Address"></div><br/>
+<div id="inuf"><input type="text" id="amnt" name="" placeholder="Amount of BTC" disabled=""></div><br/>
 <div style="display: flex;justify-content: space-around;width: 100%;">
 <button id="generate" disabled="" style="color: #ccc;">Generate</button>
 <button id="qclr">Reset</button>
@@ -122,7 +123,7 @@
 </div>
 <div id="rslt">
 <br/>
-<center><button style="background: #ecf0f1;border: none;border-radius: 10px;padding: 6px;padding-left:12px;padding-right:12px;font-size: 13px;cursor: pointer;" onclick="document.getElementById('tools').style.display = 'block';">Tools &nbsp;<i class="fa fa-cog" aria-hidden="true"></i> </button> <button style="background: #ecf0f1;border: none;border-radius: 10px;padding: 6px;padding-left:12px;padding-right:12px;font-size: 13px;cursor: pointer;" onclick="window.location.href='../index.html';"><img src="../dogecoin-300.png" height="12" width="12" align="center"> Explorer </button> <div id="qttp"><button style="background: #ecf0f1;border: none;border-radius: 10px;padding: 6px;padding-left:12px;padding-right:12px;font-size: 13px;cursor: pointer;">Help <i class="fa fa-question-circle"></i></button><span class="ttptxt" style="margin-left: -150px;width: 220px;">If you have pasted bitcoin address in input field and data is not showing then please click on input field and press CAPS LOCK button on your keyboard, actually it shows data on any keyup if address is valid and paste button is not a key of keyboard.</span></div></center>
+<center><button class="tBtn" onclick="document.getElementById('tools').style.display = 'block';">Tools &nbsp;<i class="fa fa-cog" aria-hidden="true"></i> </button> <button class="tBtn" onclick="window.location.href='../index.html';"><div style="margin:0;padding:0;display: flex;justify-content: center;align-items: center;"><img src="../dogecoin-300.png" height="10" width="10" align="center">&nbsp;Explorer </div></button> <div id="qttp"><button class="tBtn">Help <i class="fa fa-question-circle"></i></button><span class="ttptxt" style="margin-left: -150px;width: 220px;">If you have pasted bitcoin address in input field and data is not showing then please click on input field and press CAPS LOCK button on your keyboard, actually it shows data on any keyup if address is valid and paste button is not a key of keyboard.</span></div> <button class="tBtn" id="thmBtn"> <i class="fa fa-toggle-on"></i></button></center>
 <div id="oneb">
   
 </div>
@@ -138,7 +139,7 @@
       <div id="mmchdr"><h3>Use, Credits & About</h3></div>
       
       <div id="uses">
-        <p style="color: green;"><strong>Note - Use only BITCOIN network to withdraw your bitcoins from exchanges to your wallet. If you will use any other network(not bitcoin network), those bitcoins will no longer remain real. So please ensure before withdrawing, that you are withdrawing your coins through bitcoins network(This may charge you little bit more fees compared to any other network, but this will keep your bitcoins real).</strong></p>
+        <p style="color: rgb(255,69,94);"><strong>Note - Use only BITCOIN network to withdraw your bitcoins from exchanges to your wallet. If you will use any other network(not bitcoin network), those bitcoins will no longer remain real. So please ensure before withdrawing, that you are withdrawing your coins through bitcoins network(This may charge you little bit more fees compared to any other network, but this will keep your bitcoins real).</strong></p>
         
         <h4>Use : </h4>
         <p>By entering your bitcoin address in input field, you will get your - bitcoin wallet balance in bitcoin & in USD, a QR Code of your address, received amount in bitcoin, spent amount in bitcoin.</p>
@@ -172,6 +173,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/130527/qrcode.js"></script>
 <script type="text/javascript" src="much.js"></script>
+<script type="text/javascript" src="../lightTheme.js"></script>
 
 </body>
 </html>
