@@ -41,13 +41,13 @@ body.lightTheme {
 	background: transparent;
 }
 .lightTheme #usd-doge, .lightTheme #qrgenerator{
-	background: rgb(229,229,229);
+	background: rgb(231,235,236);
 	color: black;
 	border:1px solid transparent;
 }
 .lightTheme #swpIcn {
 	background: white;
-	border-color: rgb(229,229,229);
+	border-color: rgb(231,235,236);
 	color: black;
 }
 .lightTheme #inuf input {
