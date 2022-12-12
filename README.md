@@ -34,7 +34,7 @@ This website is non-profitable, it means I don't generate any income from this w
 
 I don't collect any type of your data like your dogecoin/bitcoin address, IP address, or other important data. The use of this website is just to get your dogecoin/bitcoin wallet balance wowly much fast. The complete website is built on Front-End. My purpose is not to collect your data, but is to help Dogecoin/Bitcoin community newbies & all members to getting easy access to their data.
 
-Developed & Designed by - @naveen6802
+Developed & Designed by - @naveen6802 / https://naveen6802.github.io
 
-Donate(Dogecoin) - D6XGXfT4YToQeyTJ8sU1srAEPne4FC4FdE
+Donate(Dogecoin) - DRRSueeU3DWNPFpkmU6hsq6Ur8fwRYAJ3o
 Donate(Bitcoin) - bc1q3wp94u8367kchcr0006tyqysr7e3ljq6t6h2wr
