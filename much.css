@@ -49,7 +49,7 @@
       overflow: auto;
     }
     .FAQ {
-      position: absolute;
+      position: fixed;
       bottom: 0%;
       left:50%;
       padding: 5px;
@@ -64,7 +64,8 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transform: translate(-0%,-50%);
+      transform: translate(-50%,-0%);
+      z-index:10;
     }
     #add {
       padding: 15px;
