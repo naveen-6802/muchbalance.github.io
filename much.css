@@ -64,6 +64,7 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+      transform: translate(-0%,-50%);
     }
     #add {
       padding: 15px;
