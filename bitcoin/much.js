@@ -1,5 +1,5 @@
 
-    var mqrs = document.getElementById("minqrs");
+  var mqrs = document.getElementById("minqrs");
   mqrs.addEventListener("click", function() {
     scanner.stop();
   });
@@ -51,7 +51,7 @@ $(document).ready(function() {
 
                $.getJSON('https://chain.so/api/v2/get_address_balance/BTC/' + $('#add').val(), function(data) {
                 $.blnc = data.data.confirmed_balance;
-                  $('#oneb').html('<br/><div id="addData" style="overflow:hidden;"><div id="saData"><div style="display:block;padding:5px;float: left;"><div style="padding-left: 20px;padding-top: 5px;"><p style="font-size: 13px;color: white;">Identified using <strong><a href="https://chain.so" target="_blank" style="color: #fff;text-decoration: underline;">SoChain</a></strong></p><p id="tellAdd" style="color: white;"></p></div></div><div style="padding:10px;padding-top: 20px;" id="qrcode"><img id="qrimg" height="50" width="50" style="background: white;" /><center><a id="qdn"><ion-icon name="arrow-down-circle" style="color:#fff;"></ion-icon></a></center></div></div><br/><div style="padding:5px;"><div style="padding-left: 20px;"><span id="totalBalance">Total Balance :</span><br/><span id="showingBalance" style="font-size: 20px;"><b>₿' + thousands_separators(wot($.blnc)) + '</b></span><span id="val" style="font-size:13px;"></span></div></div><br/></div><br/><div id="addData"><div style="display: block;margin: auto;padding: 25px;"><span>Received Amount : </span><br/><span id="rv" style="color: rgb(26,145,70);"></span><span id="rvv" style="font-size:13px;"></span><br/><br/><span>Sent Amount : </span><br/><span id="sv" style="color: rgb(255,69,94);"></span><span id="svv" style="font-size:13px;"></span><br/><br/><center style="display:flex;justify-content:space-around;"><a id="vosc" href="" target="_blank"><i class="fa fa-eye"></i> View on Blockchain</a><a id="senddg" href="">₿ Send Bitcoin</a></center></div></div><br/><br/><br/>');
+                  $('#oneb').html('<br/><div id="addData" style="overflow:hidden;"><div id="saData"><div style="display:block;padding:5px;float: left;"><div style="padding-left: 20px;padding-top: 5px;"><p style="font-size: 13px;color: white;">Identified using <strong><a href="https://chain.so" target="_blank" style="color: #fff;text-decoration: underline;">SoChain</a></strong></p><p id="tellAdd" style="color: white;"></p></div></div><div style="padding:10px;padding-top: 20px;" id="qrcode"><img id="qrimg" height="50" width="50" style="background: white;" /><center><a id="qdn"><ion-icon name="expand" style="color:#fff;"></ion-icon></a></center></div></div><br/><div style="padding:5px;"><div style="padding-left: 20px;"><span id="totalBalance">Total Balance :</span><br/><span id="showingBalance" style="font-size: 20px;"><b>₿' + thousands_separators(wot($.blnc)) + '</b></span><span id="val" style="font-size:13px;"></span></div></div><br/></div><br/><div id="addData"><div style="display: block;margin: auto;padding: 25px;"><span>Received Amount : </span><br/><span id="rv" style="color: rgb(26,145,70);"></span><span id="rvv" style="font-size:13px;"></span><br/><br/><span>Sent Amount : </span><br/><span id="sv" style="color: rgb(255,69,94);"></span><span id="svv" style="font-size:13px;"></span><br/><br/><center style="display:flex;justify-content:space-around;"><a id="vosc" href="" target="_blank"><i class="fa fa-eye"></i> View on Blockchain</a><a id="senddg" href="">₿ Send Bitcoin</a></center></div></div><br/><br/><br/>');
                   var GenerateQRCode, htmlEncode;
     htmlEncode = function(value) {
     return $('<div/>').text(value).html();
@@ -61,8 +61,24 @@ $(document).ready(function() {
     $('#qrimg').empty();
     // Generate and Output QR Code
     $('#qrimg').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chl=' + htmlEncode('bitcoin:'+$('#add').val()) + '&chs=500x500&chld=L|0');
-$("#qdn").prop("download", $('#add').val());
-$("#qdn").prop("href", $('#qrimg').attr("src")+'.jpg');
+//$("#qdn").prop("download", $('#add').val());
+//$("#qdn").prop("href", $('#qrimg').attr("src")+'.jpg');
+var modal = document.getElementById("sQRModal");
+var img = document.getElementById("qrimg");
+var btn = document.getElementById("qdn");
+var modalImg = document.getElementById("sQRimg");
+var captionText = document.getElementById("dsQR");
+btn.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = img.src;
+  captionText.href = img.src+'.png';
+}
+
+var span = document.getElementsByClassName("sQRclose")[0];
+
+span.onclick = function() { 
+  modal.style.display = "none";
+}
                   $.getJSON('https://chain.so/api/v2/get_price/BTC/USD', function(price) {
                   $('#val').html('&nbsp;($' + thousands_separators(wotpp($.blnc*price.data.prices[0].price)) + ')');
                    
