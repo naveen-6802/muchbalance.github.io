@@ -258,7 +258,6 @@
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
-  cursor: pointer;
 }
 .dsQR {
   color: black;
@@ -484,10 +483,6 @@ form .content p{
       display: block;
       margin: auto;
       color: white;
-      -webkit-animation-name: zoom;
-      -webkit-animation-duration: 0.3s;
-      animation-name: zoom;
-      animation-duration: 0.3s;
     }
     #swpIcn {
       font-size: 17px;
