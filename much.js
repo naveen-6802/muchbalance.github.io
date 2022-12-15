@@ -83,13 +83,15 @@ btn.onclick = function(){
   modal.style.display = "block";
   modalImg.src = img.src;
   captionText.href = img.src+'.png';
+  document.getElementById("sQRadrs").innerHTML = $("#add").val();
 }
 
 var span = document.getElementsByClassName("sQRclose")[0];
 
 span.onclick = function() { 
   modal.style.display = "none";
-}
+} 
+
                   $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(price) {
                   $('#val').html('&nbsp;($' + thousands_separators(wot($.blnc*price.data.prices[0].price)) + ')');
                    
