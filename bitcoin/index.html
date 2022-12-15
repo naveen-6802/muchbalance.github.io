@@ -46,7 +46,7 @@
 
 
 <div id="mhqr">
-<ion-icon name="close-circle" style="position: absolute;top: 2%;right: 3%;color:white;font-size: 30px;cursor: pointer;" onclick="$('#mhqr').css('display', 'none');" id="minqrs"></ion-icon>
+<span class="ncls" onclick="$('#mhqr').css('display', 'none');" id="minqrs"></span>
 <div id="mainqr">
 <div id="meow">
   <img src="qr.png" height="300" width="300" id="imgqr">
@@ -96,7 +96,7 @@
 </center>
 </header>
 <div id="tools">
-  <ion-icon name="close-circle" style="position: absolute;color: white;right: 3%;top: 2%;font-size: 25px;cursor: pointer;" onclick="document.getElementById('tools').style.display='none';"></ion-icon>
+  <span class="ncls" onclick="document.getElementById('tools').style.display='none';"></span>
 <br/><br/><br/>
 <div id="usd-doge">
   <ion-icon name="swap-vertical-outline" id="swpIcn"></ion-icon>
@@ -131,6 +131,27 @@
 </div>  
 </div>
 
+<div id="sQRModal" class="sQRmodal">
+  <span class="sQRclose">&times;</span>
+  <div>
+    <img class="sQRmodal-content" id="sQRimg">
+  </div>
+  <div id="sQRcaption">
+    <br/>
+    <a class='dsQR' id="dsQR">Download</a>
+  </div>
+</div>
+
+<div id="sQRModal" class="sQRmodal">
+  <span class="sQRclose">&times;</span>
+  <div>
+    <img class="sQRmodal-content" id="sQRimg">
+  </div>
+  <div id="sQRcaption">
+    <br/>
+    <a class='dsQR' id="dsQR">Download</a>
+  </div>
+</div>
 
 <span id="shmm"><img src="clcm.png" height="85" width="85" alt="Click me Bitcoin Bot"></span>
 
