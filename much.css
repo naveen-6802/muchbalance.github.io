@@ -138,6 +138,7 @@
       text-decoration: none;
       color: black;
       font-size: 16px;
+      cursor: pointer;
     }
     #tellAdd {
       font-size: 13px;
@@ -200,6 +201,80 @@
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
   }
+  .sQRmodal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.8);
+  backdrop-filter:blur(6px);
+}
+.sQRmodal-content {
+  margin: auto;
+  display: block;
+  width:300px;
+  height: 300px;
+  max-width: 700px;
+  background: white;
+  padding: 10px;
+  border:none;
+  border-radius: 10px;
+}
+#sQRcaption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+.sQRmodal-content, #sQRcaption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+.sQRclose, .ncls {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.dsQR {
+  color: black;
+  text-decoration: none;
+  background: white;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border:none;
+  border-radius: 6px;
+}
+.sQRclose:hover,
+.sQRclose:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
   #vosc {
     text-decoration: none;
     color: white;
@@ -408,6 +483,10 @@ form .content p{
       display: block;
       margin: auto;
       color: white;
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.3s;
+      animation-name: zoom;
+      animation-duration: 0.3s;
     }
     #swpIcn {
       font-size: 17px;
