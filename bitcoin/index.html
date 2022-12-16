@@ -46,7 +46,7 @@
 
 
 <div id="mhqr">
-<span class="ncls" onclick="$('#mhqr').css('display', 'none');" id="minqrs">&times;</span>
+<span class="ncls" onclick="$('#mhqr').css('display', 'none');" id="minqrs"></span>
 <div id="mainqr">
 <div id="meow">
   <img src="qr.png" height="300" width="300" id="imgqr">
@@ -96,7 +96,7 @@
 </center>
 </header>
 <div id="tools">
-  <span class="ncls" onclick="document.getElementById('tools').style.display='none';">&times;</span>
+  <span class="ncls" onclick="document.getElementById('tools').style.display='none';"></span>
 <br/><br/><br/>
 <div id="usd-doge">
   <ion-icon name="swap-vertical-outline" id="swpIcn"></ion-icon>
@@ -136,22 +136,28 @@
   <div>
     <img class="sQRmodal-content" id="sQRimg">
   </div>
+  <br/>
+  <center style="animation: zoom 0.3s;"><span id="sQRadrs" class="dsQR" style="font-size: 12px;animation: zoom 0.3s;"></span></center>
+  <br/>
   <div id="sQRcaption">
-    <br/>
-    <a class='dsQR' id="dsQR">Download</a>
+    <a class='dsQR' id="dsQR" style="font-size: 13px;">Download QR</a>
+    <a onclick="myCPFunction()" onmouseout="outCPFunc()" class="qttp dsQR" id="qttp" style="cursor: pointer;font-size: 13px;">Copy Address<span class="ttptxt" id="ttptxt" style="padding: 5px;font-size: 12px;">Copy to clipboard</span></a>
   </div>
 </div>
+<script type="text/javascript">
+  function myCPFunction() {
+  var copyText = document.getElementById("sQRadrs");
+  navigator.clipboard.writeText(copyText.innerHTML);
+  
+  var tooltip = document.getElementById("ttptxt");
+  tooltip.innerHTML = "Copied";
+}
 
-<div id="sQRModal" class="sQRmodal">
-  <span class="sQRclose">&times;</span>
-  <div>
-    <img class="sQRmodal-content" id="sQRimg">
-  </div>
-  <div id="sQRcaption">
-    <br/>
-    <a class='dsQR' id="dsQR">Download</a>
-  </div>
-</div>
+function outCPFunc() {
+  var tooltip = document.getElementById("ttptxt");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+</script>
 
 <span id="shmm"><img src="clcm.png" height="85" width="85" alt="Click me Bitcoin Bot"></span>
 
