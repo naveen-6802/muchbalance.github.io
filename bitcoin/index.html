@@ -41,9 +41,6 @@
 <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 </head>
 <body class="lightTheme">
-  
-<h1 style="position: absolute;left: 50%;top: 0%;transform: translate(-50%,-0%);visibility: hidden;">Bitcoin MuchBalance</h1>
-
 
 <div id="mhqr">
 <span class="ncls" onclick="$('#mhqr').css('display', 'none');" id="minqrs">&times;</span>
@@ -101,8 +98,8 @@
 <div id="usd-doge">
   <ion-icon name="swap-vertical-outline" id="swpIcn"></ion-icon>
   <span style="padding-left: 14px;font-size: 15px;">USD to BTC converter</span>
-  <div id="inuf"><input type="text" id="dolv" name="" placeholder="0.00"><img src="usd.png" style="position: absolute;height: 25px;width: 25px;z-index: 100;top: 35%;right: 8%;"></div>
-  <div id="inuf"><input type="text" id="dogv" name="" placeholder="0.00"><img src="bitcoin.png" style="position: absolute;height: 25px;width: 25px;z-index: 100;top: 35%;right: 8%;"></div>
+  <div id="inuf"><input type="text" id="dolv" name="" placeholder="0.00"><img src="usd.png" style="position: absolute;height: 25px;width: 25px;z-index: 100;top: 35%;right: 8%;" alt="USD Balance"></div>
+  <div id="inuf"><input type="text" id="dogv" name="" placeholder="0.00"><img src="bitcoin.png" style="position: absolute;height: 25px;width: 25px;z-index: 100;top: 35%;right: 8%;" alt="DOGE Balance"></div>
   <button id="clrud">Reset</button>
 </div>
 
@@ -163,10 +160,12 @@ function outCPFunc() {
 
 <div id="more"> </div>
 <div id="mmc">
-      <div id="mmchdr"><h3>Use, Credits & About</h3></div>
+      <div id="mmchdr"><h1 style="font-size:19px;">Use, Credits & About</h1></div>
       
       <div id="uses">
-        <p style="color: rgb(255,69,94);"><strong>Note - Use only BITCOIN network to withdraw your bitcoins from exchanges to your wallet. If you will use any other network(not bitcoin network), those bitcoins will no longer remain real. So please ensure before withdrawing, that you are withdrawing your coins through bitcoins network(This may charge you little bit more fees compared to any other network, but this will keep your bitcoins real).</strong></p>
+        <p style="color:rgb(37,80,250);"><strong>A simple & fast web app to check your BITCOIN balance. Bitcoin MuchBalance is a faster alternative to Blockchain.com and other blockchain explorers, although we are not their competitors.</strong></p>   
+          
+        <p style="color: rgb(255,69,94);">Note - Use only BITCOIN network to withdraw your bitcoins from exchanges to your wallet. If you will use any other network(not bitcoin network), those bitcoins will no longer remain real. So please ensure before withdrawing, that you are withdrawing your coins through bitcoins network(This may charge you little bit more fees compared to any other network, but this will keep your bitcoins real).</p>
         
         <h4>Use : </h4>
         <p>By entering your bitcoin address in input field, you will get your - bitcoin wallet balance in bitcoin & in USD, a QR Code of your address, received amount in bitcoin, spent amount in bitcoin.</p>
